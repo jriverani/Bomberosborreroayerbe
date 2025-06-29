@@ -1,0 +1,151 @@
+/* css/style.css */
+
+/* Variables de Color basadas en el logo */
+:root {
+    --bomberos-azul: #0D2D6A; /* Azul oscuro del logo */
+    --bomberos-rojo: #D42A2F; /* Rojo del logo */
+    --bomberos-blanco: #FFFFFF;
+    --texto-gris: #495057;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--texto-gris);
+}
+
+/* --- Encabezado y Navegación --- */
+.navbar {
+    background-color: var(--bomberos-azul);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.nav-link {
+    color: var(--bomberos-blanco) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--bomberos-blanco) !important;
+    border-bottom: 2px solid var(--bomberos-rojo);
+}
+
+/* --- Banner Principal --- */
+.banner {
+    position: relative;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--bomberos-blanco);
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(13, 45, 106, 0.6); /* Superposición azul semi-transparente */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* --- Secciones y Contenido --- */
+.section-padding {
+    padding: 60px 0;
+}
+
+h2 {
+    color: var(--bomberos-azul);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-link .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background-color: var(--bomberos-rojo);
+    border-color: var(--bomberos-rojo);
+}
+
+.btn-primary:hover {
+    background-color: #a52024; /* Un rojo más oscuro */
+    border-color: #a52024;
+}
+
+/* --- Página de Transparencia --- */
+.list-group-item a {
+    text-decoration: none;
+    color: var(--bomberos-azul);
+    font-weight: 500;
+}
+.list-group-item a:hover {
+    color: var(--bomberos-rojo);
+}
+
+/* --- Pie de Página (Footer) --- */
+.footer {
+    background-color: var(--bomberos-azul);
+    color: var(--bomberos-blanco);
+    padding: 40px 0;
+}
+
+.footer img {
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.footer h5 {
+    color: var(--bomberos-blanco);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer p, .footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--bomberos-blanco);
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
